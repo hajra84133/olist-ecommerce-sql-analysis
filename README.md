@@ -1,11 +1,11 @@
-# 🛒 Olist E-Commerce SQL Analysis
+# Olist E-Commerce SQL Analysis
 ### Exploratory Data Analysis using PostgreSQL
 
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-blue) ![Status](https://img.shields.io/badge/Status-Completed-green)
 
 ---
 
-## 📌 Project Overview
+## Project Overview
 
 This project performs an end-to-end exploratory data analysis on the **Olist Brazilian E-Commerce dataset** — a real-world dataset of 100,000+ orders placed between 2016 and 2018 across multiple Brazilian marketplaces.
 
@@ -13,7 +13,7 @@ The goal was to answer key business questions around revenue trends, customer be
 
 ---
 
-## 🗄️ Database Schema
+## Database Schema
 
 The analysis uses 8 relational tables loaded into PostgreSQL:
 
@@ -30,7 +30,7 @@ The analysis uses 8 relational tables loaded into PostgreSQL:
 
 ---
 
-## 🧹 Data Validation
+## Data Validation
 
 Before analysis, a quick data quality check was performed:
 
@@ -41,7 +41,7 @@ Before analysis, a quick data quality check was performed:
 
 ---
 
-## 📊 Business Questions & Analysis
+## Business Questions & Analysis
 
 ---
 
@@ -297,7 +297,7 @@ LIMIT 10;
 
 ---
 
-## 🔑 Key Insights Summary
+## Key Insights Summary
 
 | # | Insight | Impact |
 |---|---------|--------|
@@ -311,7 +311,7 @@ LIMIT 10;
 
 ---
 
-## 🛠️ Tools Used
+## Tools Used
 
 - **PostgreSQL 16** — Database management
 - **pgAdmin 4** — Query execution and data import
@@ -319,12 +319,14 @@ LIMIT 10;
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
+```
 olist-ecommerce-sql-analysis/
 │
 ├── queries.sql          # All 10 analysis queries
 ├── README.md            # This file
 └── screenshots/         # Query result screenshots
+```
 
 ---
 
