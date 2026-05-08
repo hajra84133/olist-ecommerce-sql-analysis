@@ -1,6 +1,4 @@
-Here's the complete script — go to your repo, click on README.md, click the pencil icon, select all text with Ctrl+A, delete it, and paste this:
-
-markdown# 🛒 Olist E-Commerce SQL Analysis
+# 🛒 Olist E-Commerce SQL Analysis
 ### Exploratory Data Analysis using PostgreSQL
 
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-blue) ![Status](https://img.shields.io/badge/Status-Completed-green)
