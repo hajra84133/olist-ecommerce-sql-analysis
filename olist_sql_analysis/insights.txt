@@ -1,0 +1,116 @@
+===== OLIST E-COMMERCE SQL ANALYSIS =====
+
+QUERY 1 - Revenue & Order Trends by Month
+Business Question: How has Olist's revenue and order volume grown over time?
+
+Key Findings:
+- Business started Oct 2016 with only 265 orders ($46,566 revenue)
+- Grew consistently through 2017 and 2018
+- November 2017 had a massive spike: 7,289 orders ($1,153,528) — likely Black Friday
+- By 2018 averaging 6,000-7,000 orders per month consistently
+- Peak revenue month: March 2018 with $1,120,678
+
+---
+
+QUERY 2 - Top 10 Product Categories by Revenue
+Business Question: Which product categories drive the most revenue on the platform?
+
+Key Findings:
+- Top category by revenue: health_beauty ($1,258,681 from 8,836 orders)
+- Top category by order volume: bed_bath_table (9,417 orders) but only 3rd in revenue
+- This means health_beauty products have higher average price than bed_bath_table
+- watches_gifts is 2nd in revenue ($1,205,005) despite fewer orders than bed_bath_table
+- Bottom of top 10: garden_tools with $485,256
+
+---
+
+QUERY 3 - Payment Method Analysis
+Business Question: Which payment methods do customers prefer and what is the average order value?
+
+Key Findings:
+- Credit card dominates: 76,505 orders (77% of all orders), $12.5M total revenue
+- Credit card has highest avg order value: $163.32
+- Boleto (bank slip) is 2nd most popular: 19,784 orders — shows many customers don't have credit cards
+- Vouchers have lowest avg value ($65.70) — used for small/discounted purchases
+- Debit card barely used: only 1,528 orders despite similar avg value to boleto
+
+---
+
+QUERY 4 - Delivery Time Analysis
+Business Question: How long does delivery take on average?
+
+Key Findings:
+- Average delivery time: 12.6 days
+- Fastest delivery: 0.5 days (same day essentially)
+- Slowest delivery: 209.6 days (nearly 7 months — likely an outlier/problem order)
+- 12.6 days average is quite long — could be hurting customer satisfaction
+
+---
+
+QUERY 5 - Top Rated Product Categories
+Business Question: Which product categories have the highest customer satisfaction?
+
+Key Findings:
+- Books top the satisfaction chart: general interest (4.45) and technical (4.17)
+- Food & drink scores well (4.32) — physical/consumable products rated highly
+- Pet shop has strong rating (4.19) with high volume (1,939 reviews) — reliable category
+- Stationery: 4.19 rating with highest review count (2,507) — consistently satisfying
+- No tech/electronics in top 10 — suggests electronics may have more complaints
+
+---
+
+QUERY 6 - Repeat Customer Rate
+Business Question: How many customers come back to buy again?
+
+Key Findings:
+- Only 3.12% of customers made more than one purchase (2,997 out of 96,096)
+- This is extremely low — means Olist heavily depends on acquiring new customers
+- Improving retention even slightly could massively impact revenue
+- This is a major business problem worth highlighting
+
+---
+
+QUERY 7 - Late Delivery Rate
+Business Question: What percentage of orders are delivered late?
+
+Key Findings:
+- 8.11% of delivered orders arrived late (7,826 out of 96,470)
+- Means roughly 1 in 12 customers gets a late delivery
+- Combined with 12.6 day average delivery time, logistics is a weak point
+
+---
+
+QUERY 8 - Impact of Late Delivery on Customer Satisfaction
+Business Question: Does late delivery significantly affect review scores?
+
+Key Findings:
+- On-time delivery avg rating: 4.29 out of 5
+- Late delivery avg rating: 2.57 out of 5
+- Late delivery DROPS the rating by 1.72 points — a 40% decrease in satisfaction
+- This directly connects Query 7 and Query 5 — logistics is killing customer experience
+- Fixing late deliveries would be the single highest impact improvement Olist could make
+
+---
+
+QUERY 9 - Top 10 Sellers by Revenue
+Business Question: Which sellers generate the most revenue on the platform?
+
+Key Findings:
+- Top seller is from Guariba, SP: 1,132 orders, $229,472 revenue
+- 8 out of top 10 sellers are from São Paulo state (SP) 
+- One outlier: 2nd highest seller is from Bahia (BA) with $222,776
+- Top seller by orders (1,806) is NOT the top seller by revenue — different pricing strategy
+- Heavy concentration of top sellers in SP reflects Brazil's economic geography
+
+---
+
+QUERY 10 - Revenue by Customer State  
+Business Question: Which regions drive the most sales?
+
+Key Findings:
+- São Paulo (SP) dominates: 40,500 orders, $5.77M revenue — 38% of total
+- Top 3 states (SP, RJ, MG) account for majority of all revenue
+- Strong concentration in Southeast Brazil
+- Opportunity: southern states (RS, PR, SC) show decent volume but less marketing focus
+
+---
