@@ -28,7 +28,7 @@ The analysis uses 8 relational tables loaded into PostgreSQL:
 | sellers | Seller location info | 3,095 |
 | product_category_translation | Portuguese to English category names | 71 |
 
-> 📸 **[INSERT SCREENSHOT HERE: pgAdmin left panel showing all 8 tables under ecommerce_db → Schemas → public → Tables]**
+> ![Revenue Trend](screenshots/q1.png)
 
 ---
 
