@@ -1,4 +1,6 @@
-# 🛒 Olist E-Commerce SQL Analysis
+Here's the complete script — go to your repo, click on README.md, click the pencil icon, select all text with Ctrl+A, delete it, and paste this:
+
+markdown# 🛒 Olist E-Commerce SQL Analysis
 ### Exploratory Data Analysis using PostgreSQL
 
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-blue) ![Status](https://img.shields.io/badge/Status-Completed-green)
@@ -28,8 +30,6 @@ The analysis uses 8 relational tables loaded into PostgreSQL:
 | sellers | Seller location info | 3,095 |
 | product_category_translation | Portuguese to English category names | 71 |
 
-> ![Revenue Trend](screenshots/q1.png)
-
 ---
 
 ## 🧹 Data Validation
@@ -40,8 +40,6 @@ Before analysis, a quick data quality check was performed:
 - Remaining orders are split across: shipped (1,107), cancelled (625), unavailable (609), and other statuses
 - All analysis queries filter to `WHERE order_status = 'delivered'` to ensure accuracy
 - Null timestamps handled within individual queries
-
-> 📸 **[INSERT SCREENSHOT HERE: pgAdmin query result showing order status distribution with counts]**
 
 ---
 
@@ -58,7 +56,7 @@ Before analysis, a quick data quality check was performed:
 - By 2018, platform stabilized at 6,000–7,000 orders per month consistently
 - Peak revenue month: March 2018 at $1,120,678
 
-> 📸 **[INSERT SCREENSHOT HERE: query result showing monthly revenue table from 2016 to 2018]**
+![Revenue Trend](screenshots/q1.png)
 
 ```sql
 SELECT 
@@ -84,7 +82,7 @@ ORDER BY year, month;
 - **watches_gifts** earns $1,205,005 despite fewer orders than bed_bath_table — premium pricing
 - Bottom of top 10: garden_tools at $485,256
 
-> 📸 **[INSERT SCREENSHOT HERE: query result showing top 10 categories with order count and revenue columns]**
+![Top Categories](screenshots/q2.png)
 
 ```sql
 SELECT 
@@ -110,7 +108,7 @@ LIMIT 10;
 - Vouchers have lowest average value ($65.70) — used mainly for discounted/small purchases
 - Debit card is barely used despite similar average value to boleto
 
-> 📸 **[INSERT SCREENSHOT HERE: query result showing payment types with order count, avg value, and total revenue]**
+![Payment Methods](screenshots/q3.png)
 
 ```sql
 SELECT 
@@ -133,8 +131,6 @@ ORDER BY total_revenue DESC;
 - Slowest delivery: 209.6 days — extreme outlier, likely a logistics failure
 - Long average delivery time is a platform-wide concern that directly impacts customer satisfaction (see Q8)
 
-> 📸 **[INSERT SCREENSHOT HERE: query result showing avg, min, max delivery days]**
-
 ```sql
 SELECT 
     ROUND(AVG(EXTRACT(EPOCH FROM (order_delivered_customer_date - order_purchase_timestamp))/86400)::numeric, 1) AS avg_delivery_days,
@@ -156,7 +152,7 @@ AND order_delivered_customer_date IS NOT NULL;
 - **No electronics or tech categories appear in the top 10** — suggests tech products generate more complaints
 - High-volume categories like stationery (2,507 reviews, 4.19 avg) show consistency at scale
 
-> 📸 **[INSERT SCREENSHOT HERE: query result showing top 10 categories by avg rating with review counts]**
+![Top Rated Categories](screenshots/q5.png)
 
 ```sql
 SELECT 
@@ -183,7 +179,7 @@ LIMIT 10;
 - Improving retention even by 2–3% could significantly impact long-term revenue
 - **Customer retention is the single biggest growth opportunity on the platform**
 
-> 📸 **[INSERT SCREENSHOT HERE: query result showing total customers, repeat customers, and repeat rate percentage]**
+![Repeat Customer Rate](screenshots/q6.png)
 
 ```sql
 SELECT 
@@ -210,7 +206,7 @@ FROM (
 - Combined with the 12.6 day average (Q4), logistics is a clear weak point
 - Late deliveries have a severe impact on ratings — see Q8
 
-> 📸 **[INSERT SCREENSHOT HERE: query result showing total delivered, late orders, and late percentage]**
+![Late Delivery Rate](screenshots/q7.png)
 
 ```sql
 SELECT
@@ -236,7 +232,7 @@ AND order_estimated_delivery_date IS NOT NULL;
 - This is the most actionable finding in the entire analysis
 - Fixing late deliveries would directly improve platform ratings and customer retention
 
-> 📸 **[INSERT SCREENSHOT HERE: query result showing On Time vs Late with avg review score side by side]**
+![Delivery Impact on Reviews](screenshots/q8.png)
 
 ```sql
 SELECT
@@ -260,8 +256,6 @@ GROUP BY delivery_status;
 - **8 out of top 10 sellers are from São Paulo state** — reflects Brazil's economic concentration
 - The seller with the most orders (1,806 from Ibitinga) is NOT the highest revenue seller — different pricing strategy
 - One outlier in top 10: seller from Bahia (BA) ranks 2nd in revenue despite being outside SP
-
-> 📸 **[INSERT SCREENSHOT HERE: query result showing top 10 sellers with city, state, orders, and revenue]**
 
 ```sql
 SELECT 
@@ -287,7 +281,7 @@ LIMIT 10;
 - Heavy concentration in Southeast Brazil reflects population and income distribution
 - Southern states (RS, PR, SC) show solid volume — potential for targeted growth campaigns
 
-> 📸 **[INSERT SCREENSHOT HERE: query result showing top 10 states by order count and revenue]**
+![Revenue by State](screenshots/q10.png)
 
 ```sql
 SELECT 
@@ -328,14 +322,11 @@ LIMIT 10;
 ---
 
 ## 📁 Repository Structure
-
-```
 olist-ecommerce-sql-analysis/
 │
 ├── queries.sql          # All 10 analysis queries
 ├── README.md            # This file
 └── screenshots/         # Query result screenshots
-```
 
 ---
 
